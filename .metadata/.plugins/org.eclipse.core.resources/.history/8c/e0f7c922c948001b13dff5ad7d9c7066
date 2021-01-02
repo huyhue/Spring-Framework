@@ -1,0 +1,5 @@
+package edu.poly.spring.services;
+
+public interface SubjectService {
+
+}

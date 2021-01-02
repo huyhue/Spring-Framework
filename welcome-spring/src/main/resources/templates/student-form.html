@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Form Student</title>
+</head>
+<body>
+<h1>Input information student</h1>
+	<form action="/students" method="post">
+		Name: <input type="text" name="name"><br>
+		GPA: <input type="text" name="gpa"><br>
+		Major:
+		<select name="major">
+			<option value="web">Web design</option>
+			<option value="java">Java Programming</option>
+			<option value="graphics">Graphics</option>
+			<option value="net">.Net Programming</option>
+		</select><br>
+		<input type="submit" value="Register">
+		<input type="button" value="List Students">
+	</form>
+</body>
+</html>

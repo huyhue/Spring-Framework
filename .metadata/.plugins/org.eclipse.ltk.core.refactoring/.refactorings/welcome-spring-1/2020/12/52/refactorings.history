@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;ImageController.java&apos; to &apos;Assignment1/src/main/java/edu.poly.spring.controllers&apos;&#x0D;&#x0A;- Original project: &apos;welcome-spring-1&apos;&#x0D;&#x0A;- Destination element: &apos;Assignment1/src/main/java/edu.poly.spring.controllers&apos;&#x0D;&#x0A;- Original element: &apos;edu.poly.spring.controllers.ImageController.java&apos;" description="Copy compilation unit" destination="=Assignment1/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;edu.poly.spring.controllers" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;edu.poly.spring.controllers{ImageController.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1608978609761" units="1" version="1.0"/>
+</session>

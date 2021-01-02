@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorate="~{layout/admin.html}">
+<head>
+<meta charset="UTF-8">
+<title>Add Or Edit</title>
+</head>
+<body>
+<div layout:fragment="content">
+	<div th:if="${message != null}">
+			<input th:text="${message}"><br>
+		</div>
+		
+	<form th:action="@{/departs/saveOrUpdate}" method="post" th:object="${depart}">
+		<div th:if="${id > 0}">
+			<input th:field="*{id}" placeholder="Department ID"><br>
+		</div>
+		<input type="text" th:field="*{name}" placeholder="Name"><br> 
+		<input type="submit" value="Add" th:if="${id <= 0}"><br> 
+		<input type="submit" value="Update" th:if="${id > 0}"><br> 
+		
+		<a th:href="@{/departs/add}">New</a>
+		<a th:href="@{/departs/list}">List Departments</a>
+	</form>
+</div>
+		
+</body>
+</html>

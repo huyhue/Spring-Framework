@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>New Student</title>
+</head>
+<body>
+	<h1>Add Student</h1>
+	<form th:action="@{/students/add}" th:object="${student}" method="post">
+	Major:
+	<select th:field="*{majorId}">
+		<option th:each="item : ${majors}"
+				th:text="${item.name}" 
+				th:value="${item.majorId}"> 
+		</option>
+	</select><br>
+		Student ID: <input type="text" th:field="*{studentId}"> <br>
+		Name: <input type="text" th:field="*{name}"> <br> <input
+			type="submit" value="Add Student">
+	</form>
+</body>
+</html>

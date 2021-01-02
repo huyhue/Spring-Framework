@@ -1,0 +1,57 @@
+package edu.poly.spring.controllers;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import edu.poly.spring.models.Depart;
+import edu.poly.spring.models.Staff;
+import edu.poly.spring.services.StaffService;
+
+@Controller
+@RequestMapping("/staffs")
+public class StaffController {
+	@Autowired
+	private StaffService staffService;
+	
+	@RequestMapping("/list")
+	public String list(ModelMap model) {
+		model.addAttribute("depart", staffService.findAll());
+		return "staffs/list";
+	}
+	
+	@GetMapping("/add")
+	public String add(ModelMap model) {
+		StaffDto staff = new StaffDto();
+		//staff.setDepart(new Depart());
+		model.addAttribute("staffDto", staff);
+		
+		return "staffs/addOrEdit";
+	}
+	
+	@PostMapping("/saveOrUpdate")
+	public String saveOrUpdate(ModelMap model, Staff staff) {
+		
+		if (staff.getId() != null && staff.getId() > 0) {
+			model.addAttribute("message","The Staff insert");
+		}else {
+			model.addAttribute("message","New Staff insert");
+		}
+		staffService.save(staff);
+		return "staffs/addOrEdit";
+	}
+	@ModelAttribute(name = "departs")
+	public List<Depart> getDeparts(){
+		return staffService.findAllDeparts();
+	}
+	
+}

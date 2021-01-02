@@ -1,0 +1,5 @@
+package edu.poly.spring.controllers;
+
+public class SubjectController {
+
+}
