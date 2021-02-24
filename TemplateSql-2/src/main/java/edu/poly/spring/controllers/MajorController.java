@@ -30,7 +30,7 @@ public class MajorController {
 		
 		for (Iterator iterator = list.iterator(); iterator.hasNext();) {
 			Major major = (Major) iterator.next();
-			System.out.println("============Name: " + major.getName());
+			System.out.println("============ Name: " + major.getName());
 		}
 		return "list";
 	}

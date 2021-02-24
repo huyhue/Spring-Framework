@@ -32,5 +32,12 @@ public class Student {
 		this.majorId = majorId;
 	}
 	
+	public void init() {
+		System.out.println("Init student");
+	}
+	
+	public void destroy() {
+		System.out.println("Destroy student");
+	}
 	
 }

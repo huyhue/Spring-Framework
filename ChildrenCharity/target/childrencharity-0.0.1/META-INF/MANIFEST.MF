@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Created-By: IntelliJ IDEA
+Built-By: doand
+Build-Jdk: 1.8.0_111
+Implementation-Title: ChildrenCharity
+Implementation-Version: 0.0.1
+Implementation-Vendor-Id: edu.fud
+Main-Class: ${start-class}
+

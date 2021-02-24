@@ -7,7 +7,6 @@ public class Customer {
 	private int age;
 	
 	public Customer() {
-		// TODO Auto-generated constructor stub
 	}
 	public Customer(int id, String name, String email, int age) {
 		super();

@@ -46,8 +46,18 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="E:\Spring Framework\CGDN-SpringBoot-SpringSecurity"/>
+			<item value="E:\Spring Framework\Spring-JPA"/>
+			<item value="E:\Spring Framework\Spring-Entity-Manager"/>
+			<item value="E:\Spring Framework\Spring-ModelAndView"/>
+			<item value="E:\Spring Framework\Spring-Thymeleaf"/>
+			<item value="E:\Spring Framework\ChildrenCharity"/>
+			<item value="C:\Users\Admin\Downloads\LAB231\Group Project\ChildrenCharity"/>
+			<item value="E:\Spring Framework\QuizSpringProject"/>
 			<item value="E:\Spring Framework\registration-login-spring-boot-security-thymeleaf-hibernate"/>
 			<item value="E:\Spring Framework\coronavirus-tracker"/>
 		</list>
+	</section>
+	<section name="NewWizardAction">
 	</section>
 </section>

@@ -6,8 +6,8 @@
 </head>
 <body>
 	<div th:if="${message != null}">
-		<input th:text="${message}"><br>
-	</div>
+		<input th:text="${message}">
+	</div><br>
 	<form th:action="@{/staffs/saveOrUpdate}" method="post" th:object="${staffDto}" enctype="multipart/form-data">
 		Department: 
 		<select th:field="*{departId}">

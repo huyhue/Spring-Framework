@@ -20,6 +20,16 @@ public class UserController {
 		return "users/addOrEdit";
 	}
 	
+//	@RequestMapping(value = {"/article", "/article/{id}"})
+//	public Article getArticle(@PathVariable Optional<Integer> optionalArticleId) {
+//	    if (optionalArticleId.isPresent()) {
+//	        Integer articleId = optionalArticleId.get();
+//	        //...trang chi tiet 
+//	    } else {
+//	        //...trang toan bo
+//	    }
+//	}
+	
 	//cach 1
 //	@PostMapping("/saveOrUpdate")
 //	public String saveOrUpdate(HttpServletRequest request, ModelMap model) {

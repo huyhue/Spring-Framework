@@ -28,44 +28,45 @@ import edu.poly.spring.services.StaffService;
 public class StaffController {
 	@Autowired
 	private StaffService staffService;
-	
+
 	@RequestMapping("/list")
 	public String list(ModelMap model) {
 		model.addAttribute("staffs", staffService.findAll());
 		return "staffs/list";
 	}
-	
+
 	@GetMapping("/add")
 	public String add(ModelMap model) {
 		StaffDto staff = new StaffDto();
-		//Staff staff = new Staff();
-		//staff.setDepart(new Depart());
+		// Staff staff = new Staff();
+		// staff.setDepart(new Depart());
 		model.addAttribute("staffDto", staff);
-		
+
 		return "staffs/addOrEdit";
 	}
-	
+
 	@PostMapping("/saveOrUpdate")
-	public String saveOrUpdate(ModelMap model,@Validated StaffDto staffDto, BindingResult result) {
-		
+	public String saveOrUpdate(ModelMap model, @Validated StaffDto staffDto, BindingResult result) {
+
 		if (result.hasErrors()) {
-			model.addAttribute("message","Please input all required fields!!!");
+			model.addAttribute("message", "Please input all required fields!!!");
 			model.addAttribute("staffDto", staffDto);
 			return "staffs/addOrEdit";
 		}
-		
+
 		if (staffDto.getId() != null && staffDto.getId() > 0) {
-			model.addAttribute("message","The Staff insert");
-		}else {
-			model.addAttribute("message","New Staff insert");
+			model.addAttribute("message", "The Staff insert");
+		} else {
+			model.addAttribute("message", "New Staff insert");
 		}
 		Path path = Paths.get("images/");
-		try (InputStream is = staffDto.getImage().getInputStream()){
-			Files.copy(is, path.resolve(staffDto.getImage().getOriginalFilename()), StandardCopyOption.REPLACE_EXISTING);
+		try (InputStream is = staffDto.getImage().getInputStream()) {
+			Files.copy(is, path.resolve(staffDto.getImage().getOriginalFilename()),
+					StandardCopyOption.REPLACE_EXISTING);
 			String filename = staffDto.getImage().getOriginalFilename();
 		} catch (Exception e) {
 			e.printStackTrace();
-			model.addAttribute("message", "Error: "+e.getMessage());
+			model.addAttribute("message", "Error: " + e.getMessage());
 		}
 		Staff staff = new Staff();
 		staff.setBirthday(staffDto.getBirthday());
@@ -74,15 +75,15 @@ public class StaffController {
 		Depart depart = new Depart();
 		depart.setId(staffDto.getDepartId());
 		staff.setDepart(depart);
-		
+
 		staffService.save(staff);
 		model.addAttribute("staffDto", staffDto);
 		return "staffs/addOrEdit";
 	}
-	
+
 	@ModelAttribute(name = "departs")
-	public List<Depart> getDeparts(){
+	public List<Depart> getDeparts() {
 		return staffService.findAllDeparts();
 	}
-	
+
 }
