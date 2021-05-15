@@ -3,13 +3,10 @@
 <head>
     <title th:utext="${title}"></title>
 </head>
-
 <body>
-
 <!-- Include _menu.html -->
 <th:block th:include="/_menu"></th:block>
-
+<span th:utext="${title}"></span>
 <h2>Message : <span th:utext="${message}"></span></h2>
-
 </body>
 </html>

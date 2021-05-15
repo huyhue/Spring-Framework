@@ -46,6 +46,21 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="E:\Spring Framework\Advanced-Contact-Manager"/>
+			<item value="E:\Spring Framework\CinemaBooking"/>
+			<item value="E:\Spring Framework\quiz-app"/>
+			<item value="E:\Spring Framework\TravelWebApplication-Virtugo"/>
+			<item value="E:\Spring Framework\hotelReservation"/>
+			<item value="C:\Users\Admin\Desktop\new\hotel-management-system"/>
+			<item value="E:\Project Java\QuizZz"/>
+			<item value="C:\Users\Admin\Desktop\new\QuizZz"/>
+			<item value="C:\Users\Admin\Desktop\new\Advanced-Contact-Manager"/>
+			<item value="C:\Users\Admin\Desktop\new\cinema-booking-system"/>
+			<item value="C:\Users\Admin\Desktop\new\SpringSocialNetwork"/>
+			<item value="C:\Users\Admin\Desktop\new\hotel-reservation-springmvc"/>
+			<item value="C:\Users\Admin\Desktop\new\banking-app-spring"/>
+			<item value="C:\Users\Admin\Desktop\new\SpringMVC-Hibernate-HotelBookingWebApplication"/>
+			<item value="E:\Spring Framework\TravelWebApplication-Virtugo\travelapp"/>
 			<item value="E:\Spring Framework\CGDN-SpringBoot-SpringSecurity"/>
 			<item value="E:\Spring Framework\Spring-JPA"/>
 			<item value="E:\Spring Framework\Spring-Entity-Manager"/>
